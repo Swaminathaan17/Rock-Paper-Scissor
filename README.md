@@ -64,4 +64,3 @@ Score → You: 1 | Computer: 0
 * String Manipulation
 * User Input Handling
 ```
-```
