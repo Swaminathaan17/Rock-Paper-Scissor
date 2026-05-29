@@ -1,64 +1,67 @@
-# Rock-Paper-Scissor
-A fun and interactive Rock Paper Scissors game using C++. Play against the computer, test your luck and track your score. 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <string>
-using namespace std;
+````md
+# 🎮 Rock Paper Scissors Game
 
-string getComputerChoice() {
-    int random = rand() % 3;
-    if (random == 0) return "rock";
-    else if (random == 1) return "paper";
-    else return "scissors";
-}
+A fun and interactive **Rock Paper Scissors** game built using **C++**. Challenge the computer, test your luck 🍀, and track your score as you compete to become the ultimate champion! 🏆
 
-string findWinner(const string& player, const string& computer) {
-    if (player == computer) return "draw";
-    if ((player == "rock" && computer == "scissors") ||
-        (player == "paper" && computer == "rock") ||
-        (player == "scissors" && computer == "paper"))
-        return "player";
-    else
-        return "computer";
-}
+## ✨ Features
 
-int main() {
-    srand(time(0));
-    int playerScore = 0, computerScore = 0;
-    string playerChoice, computerChoice, result;
-    char playAgain;
+- 🪨 Rock, 📄 Paper, ✂️ Scissors gameplay
+- 🤖 Random computer-generated moves
+- 📊 Real-time score tracking
+- 🔄 Play multiple rounds
+- ✅ Input validation for user choices
+- 🏅 Final winner announcement
 
-    cout << "=== ROCK - PAPER - SCISSORS ===\n";
-    do {
-        cout << "Your choice: ";
-        cin >> playerChoice;
-        for (auto &c : playerChoice) c = tolower(c);
-        if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
-            cout << "Invalid choice!\n";
-            continue;
-        }
-        computerChoice = getComputerChoice();
-        cout << "Computer chose: " << computerChoice << "\n";
-        result = findWinner(playerChoice, computerChoice);
-        if (result == "player") {
-            cout << "You win this round!\n";
-            playerScore++;
-        } else if (result == "computer") {
-            cout << "Computer wins this round!\n";
-            computerScore++;
-        } else {
-            cout << "It's a draw!\n";
-        }
-        cout << "Score → You: " << playerScore << " | Computer: " << computerScore << "\n";
-        cout << "Play again? (y/n): ";
-        cin >> playAgain;
-        cout << "\n";
-    } while (playAgain == 'y' || playAgain == 'Y');
+## 🛠️ Technologies Used
 
-    cout << "Final Score → You: " << playerScore << " | Computer: " << computerScore << "\n";
-    if (playerScore > computerScore) cout << "You are the champion!\n";
-    else if (playerScore < computerScore) cout << "Computer wins the game!\n";
-    else cout << "It's a tie!\n";
-    return 0;
-}
+- C++
+- Standard Library (`iostream`, `cstdlib`, `ctime`, `string`)
+
+## 🚀 How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone <repository-url>
+````
+
+2. Compile the program:
+
+   ```bash
+   g++ rock_paper_scissors.cpp -o game
+   ```
+
+3. Run the executable:
+
+   ```bash
+   ./game
+   ```
+
+## 🎯 How to Play
+
+1. Enter **rock**, **paper**, or **scissors**.
+2. The computer will randomly make its choice.
+3. The winner of the round is determined automatically.
+4. Scores are updated after each round.
+5. Continue playing until you choose to quit.
+
+## 📸 Sample Output
+
+```text
+=== ROCK - PAPER - SCISSORS ===
+Your choice: rock
+Computer chose: scissors
+You win this round!
+
+Score → You: 1 | Computer: 0
+```
+
+## 📚 Concepts Used
+
+* Functions
+* Loops
+* Conditional Statements
+* Random Number Generation
+* String Manipulation
+* User Input Handling
+```
+```
