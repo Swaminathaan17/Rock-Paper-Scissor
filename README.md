@@ -1,66 +1,62 @@
-````md
-# 🎮 Rock Paper Scissors Game
+# 🎮 Rock Paper Scissors
 
-A fun and interactive **Rock Paper Scissors** game built using **C++**. Challenge the computer, test your luck 🍀, and track your score as you compete to become the ultimate champion! 🏆
+A fun and interactive Rock Paper Scissors game built using C++. Challenge the AI across multiple difficulty levels and match formats while testing your strategy and luck.
 
 ## ✨ Features
 
-- 🪨 Rock, 📄 Paper, ✂️ Scissors gameplay
-- 🤖 Random computer-generated moves
-- 📊 Real-time score tracking
-- 🔄 Play multiple rounds
-- ✅ Input validation for user choices
-- 🏅 Final winner announcement
+* 👤 Username support
+* 🎯 Best of 1, Best of 3, and Best of 5 matches
+* 😊 Easy Mode (Random AI)
+* 😎 Medium Mode (50% AI Advantage)
+* 😈 Hard Mode (AI Cheat Mode)
+* 🔤 Supports `rock`, `paper`, `scissors`
+* ⚡ Supports shortcuts `r`, `p`, `s`
+* 📊 Live score tracking
+* 🤖 AI taunts in Hard Mode
+* 🔄 Play Again option
 
-## 🛠️ Technologies Used
+## 🛠️ Built With
 
-- C++
-- Standard Library (`iostream`, `cstdlib`, `ctime`, `string`)
+* C++
+* STL
+* Random Number Generation
+* String Manipulation
 
 ## 🚀 How to Run
 
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-````
+```bash
+g++ main.cpp -o game
+./game
+```
 
-2. Compile the program:
-
-   ```bash
-   g++ rock_paper_scissors.cpp -o game
-   ```
-
-3. Run the executable:
-
-   ```bash
-   ./game
-   ```
-
-## 🎯 How to Play
-
-1. Enter **rock**, **paper**, or **scissors**.
-2. The computer will randomly make its choice.
-3. The winner of the round is determined automatically.
-4. Scores are updated after each round.
-5. Continue playing until you choose to quit.
-
-## 📸 Sample Output
+## 📸 Sample Gameplay
 
 ```text
-=== ROCK - PAPER - SCISSORS ===
+Enter Username: Swami
+
+Choose Match Type:
+1. Best of 1
+3. Best of 3
+5. Best of 5
+
+Choose Difficulty:
+1. Easy
+2. Medium
+3. Hard
+
 Your choice: rock
-Computer chose: scissors
-You win this round!
 
-Score → You: 1 | Computer: 0
+Computer chose: paper
+🤖 Predictable.
+
+❌ Computer wins this round!
 ```
 
-## 📚 Concepts Used
+## 📌 Future Improvements
 
-* Functions
-* Loops
-* Conditional Statements
-* Random Number Generation
-* String Manipulation
-* User Input Handling
-```
+* 🌐 Web Version
+* 🎨 Better UI/Animations
+* 🏆 High Score System
+* 📈 Player Statistics
+
+⭐ Star this repository if you like the project!
